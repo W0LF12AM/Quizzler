@@ -39,6 +39,14 @@ class QuizBrain {
     }
   }
 
+  void reset() {
+    _questionNumber = 0;
+  }
+
+  bool isFinished() {
+    return _questionNumber >= _questionBank.length - 1;
+  }
+
   String getQuestionTetx() {
     return _questionBank[_questionNumber].questionText ??
         'Pertanyaan tidak ditemukan';

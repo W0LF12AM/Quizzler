@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:quizzler/quiz_brain.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
 
 QuizBrain quizBrain = QuizBrain();
 
@@ -68,6 +69,28 @@ class _QuizPageState extends State<QuizPage> {
                 ),
                 onPressed: () {
                   checkAnswer(true);
+                  if (quizBrain.isFinished() == true) {
+                    Alert(
+                        context: context,
+                        title: "Quiz Finished",
+                        desc: "You have reached the end of the quiz.",
+                        buttons: [
+                          DialogButton(
+                            onPressed: () {
+                              Navigator.pop(context);
+                              quizBrain.reset();
+                              setState(() {
+                                scoreKeeper.clear();
+                              });
+                            },
+                            child: Text(
+                              "Restart Quiz",
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 20),
+                            ),
+                          )
+                        ]).show();
+                  }
                 },
                 child: Text(
                   'True',
@@ -90,6 +113,28 @@ class _QuizPageState extends State<QuizPage> {
                 ),
                 onPressed: () {
                   checkAnswer(false);
+                  if (quizBrain.isFinished() == true) {
+                    Alert(
+                        context: context,
+                        title: "Quiz Finished",
+                        desc: "You have reached the end of the quiz.",
+                        buttons: [
+                          DialogButton(
+                            onPressed: () {
+                              Navigator.pop(context);
+                              quizBrain.reset();
+                              setState(() {
+                                scoreKeeper.clear();
+                              });
+                            },
+                            child: Text(
+                              "Restart Quiz",
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 20),
+                            ),
+                          )
+                        ]).show();
+                  }
                 },
                 child: Text(
                   'False',
@@ -108,9 +153,3 @@ class _QuizPageState extends State<QuizPage> {
     );
   }
 }
-
-
-//true or false question :
-// 1. The sky is blue.
-// 2. The grass is purple. 
-// 3. Water is wet.
