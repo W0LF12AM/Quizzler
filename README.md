@@ -15,8 +15,9 @@ flutter run
 ```
 
 ## 📁 File Utama
-- `main.dart` – UI utama
+- `main.dart` – Memanggil UI utama
 - `quiz_brain.dart` – Logic dan data soal
+- `quizPage.dart` - UI utama 
 - `question.dart` – Class untuk model soal
 
 Made with Flutter 💙
