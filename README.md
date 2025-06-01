@@ -1,16 +1,22 @@
-# quizzler
+# 🧠 Quizler App (Flutter)
 
-A new Flutter project.
+A simple true/false quiz app built with Flutter.
 
-## Getting Started
+Di project ini, gue belajar dasar-dasar **Object-Oriented Programming (OOP)** di Dart, seperti:
+- Membuat class (`Question`, `QuizBrain`)
+- Menggunakan list of objects
+- Memisahkan logic dari UI
 
-This project is a starting point for a Flutter application.
+## 🚀 Cara Jalankan
 
-A few resources to get you started if this is your first Flutter project:
+```bash
+flutter pub get
+flutter run
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 📁 File Utama
+- `main.dart` – UI utama
+- `quiz_brain.dart` – Logic dan data soal
+- `question.dart` – Class untuk model soal
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Made with Flutter 💙
